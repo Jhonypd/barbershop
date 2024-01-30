@@ -29,7 +29,7 @@ export default async function Home() {
         </h3>
         <BookingItem />
       </div>
-      <div className="mt-6">
+      <div className="mt-6 mb-[4.5rem]">
         <h3 className="tex-xs px-5 mb-3 uppercase text-gray-400 font-bold">
           Recomendados
         </h3>
