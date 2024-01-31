@@ -17,7 +17,7 @@ interface BarberShopInfoProps {
 const BarbershopInfo = ({ barbershop }: BarberShopInfoProps) => {
   const router = useRouter();
   const handleBackClick = () => {
-    router.back();
+    router.replace("/");
   };
   return (
     <div>
@@ -39,7 +39,7 @@ const BarbershopInfo = ({ barbershop }: BarberShopInfoProps) => {
               <MenuIcon />
             </Button>
           </SheetTrigger>
-          
+
           <SheetContent className="p-0">
             <SideMenu />
           </SheetContent>
