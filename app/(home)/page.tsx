@@ -25,7 +25,7 @@ export default async function Home() {
       </div>
       <div className="px-5 mt-6">
         <h3 className="tex-xs mb-3 uppercase text-gray-400 font-bold">
-          Agendaentos
+          Agendamentos
         </h3>
         <BookingItem />
       </div>
