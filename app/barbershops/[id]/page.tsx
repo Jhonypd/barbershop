@@ -12,9 +12,7 @@ interface barbershopDetailsPageProps {
   };
 }
 
-const barbershopDetailsPage = async ({
-  params,
-}: barbershopDetailsPageProps) => {
+const barbershopDetailsPage = async ({ params }: barbershopDetailsPageProps) => {
   const session = await getServerSession(authOptions);
 
   if (!params.id) {
