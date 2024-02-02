@@ -23,12 +23,12 @@ export default async function Home() {
       <div className="px-5 mt-6">
         <Search />
       </div>
-      <div className="px-5 mt-6">
+      {/* <div className="px-5 mt-6">
         <h3 className="tex-xs mb-3 uppercase text-gray-400 font-bold">
           Agendamentos
         </h3>
         <BookingItem />
-      </div>
+      </div> */}
       <div className="mt-6 mb-[4.5rem]">
         <h3 className="tex-xs px-5 mb-3 uppercase text-gray-400 font-bold">
           Recomendados

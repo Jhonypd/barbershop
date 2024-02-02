@@ -17,7 +17,7 @@ import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { generateDayTimeList } from "../_helpers/hours";
-import { format, setHours, setMinutes } from "date-fns";
+import { format, isPast, setHours, setMinutes } from "date-fns";
 import { saveBooking } from "../_actions/save-booking";
 import { getDayBookings } from "../_actions/get-day-bookings";
 import { Loader2 } from "lucide-react";
