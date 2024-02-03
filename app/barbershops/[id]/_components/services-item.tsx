@@ -115,10 +115,11 @@ const ServicesItems = ({ service, isAuthenticated, barbershop }: ServicesItemsPr
       const timeMinutes = Number(time.split(":")[1]);
 
       const booking = dayBookings.find((booking) => {
+        const currentTime = new Date();
         const bookingHour = booking.date.getHours();
         const bookingMinutes = booking.date.getMinutes();
 
-        return bookingHour === timeHour && bookingMinutes === timeMinutes;
+        return bookingHour === timeHour && bookingMinutes === timeMinutes
       });
 
       if (!booking) {
