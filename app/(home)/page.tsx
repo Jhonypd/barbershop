@@ -7,7 +7,7 @@ import Search from "./_components/search";
 import BookingItem from "../_components/booking-item";
 import { db } from "../_lib/prisma";
 import BarbershopItem from "./_components/barbershop-item";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "../_lib/auth";
 import { getServerSession } from "next-auth";
 
 export default async function Home() {
