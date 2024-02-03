@@ -45,6 +45,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
 
   const handleCancelClick = async () => {
     setIsDeleteLoading(true);
+    
     try {
       await cancelBooking(booking.id);
 
@@ -56,7 +57,6 @@ const BookingItem = ({ booking }: BookingItemProps) => {
     }
   };
 
-  console.log(handleCancelClick);
   return (
     <Sheet>
       <SheetTrigger>
