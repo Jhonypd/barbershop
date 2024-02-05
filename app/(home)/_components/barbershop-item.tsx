@@ -23,7 +23,7 @@ const BarbershopItem = ({ barbershop }: BarbershopProps) => {
   };
   return (
     <Card className="min-w-full max-w-full rounded-2xl">
-      <CardContent className="px-1 py-0">
+      <CardContent className="px-1 py-0 pt-1">
         <div className="w-full h-[159px] relative">
           <div className="absolute top-2 left-2 z-50">
             <Badge
@@ -42,10 +42,10 @@ const BarbershopItem = ({ barbershop }: BarbershopProps) => {
           />
         </div>
         <div className="px-2 pb-3">
-          <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">
+          <h2 className="font-bold mt-2 overflow-hidden truncate text-ellipsis text-nowrap">
             {barbershop.name}
           </h2>
-          <p className="tex-sm text-gray-400 text-ellipsis overflow-hidden text-nowrap">
+          <p className="tex-sm text-gray-400 truncate text-ellipsis overflow-hidden text-nowrap">
             {barbershop.address}
           </p>
           <Button
