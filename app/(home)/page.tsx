@@ -13,8 +13,11 @@ import { getServerSession } from "next-auth";
 export default async function Home() {
   const session = await getServerSession(authOptions);
 
-  const [barbershops, confirmedBookings] = await Promise.all([
+  const [barbershops, recommendedBarbershops, confirmedBookings] = await Promise.all([
     db.barbershop.findMany({}),
+    db.barbershop.findMany({
+      orderBy: { id: "asc" },
+    }),
     session?.user
       ? db.booking.findMany({
           where: {
@@ -44,7 +47,7 @@ export default async function Home() {
           {format(new Date(), "EEEE',' dd 'de' MMMM", { locale: ptBR })}
         </p>
       </div>
-      
+
       <div className="px-5 mt-6">
         <Search />
       </div>
@@ -81,7 +84,7 @@ export default async function Home() {
       <div className="mt-6 mb-[4.5rem]">
         <h3 className="tex-xs px-5 mb-3 uppercase text-gray-400 font-bold">Populares</h3>
         <div className="flex px-5 gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden">
-          {barbershops.map((barbershop) => (
+          {recommendedBarbershops.map((barbershop) => (
             <div className="min-w-[167px] max-w-[167px]" key={barbershop.id}>
               <BarbershopItem barbershop={barbershop} />
             </div>
